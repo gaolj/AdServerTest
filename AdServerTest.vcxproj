@@ -95,7 +95,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\admanager\debug2015;D:\Program Files\boost_1_59_0\lib32-msvc-14.0;..\protobuf-3.2.0\cmake\vs2015\Debug;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\admanager\debug2015;D:\Program Files\boost_1_59_0\lib32-msvc-14.0;..\protobuf-3.2.0\cmake\vs2015\Debug;..\cpp-netlib-0.9.4\vs2015\libs\network\src\debug</AdditionalLibraryDirectories>
       <AdditionalOptions>AdManager2015.lib libprotobufd.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
