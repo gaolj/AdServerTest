@@ -70,3 +70,10 @@ BOOST_AUTO_TEST_CASE(tc_message_test2, *utf::enable_if<enable_message>())
 
 	std::cout << "END message 中文" << std::endl << std::endl;
 }
+
+BOOST_AUTO_TEST_CASE(tc_end_message, *utf::enable_if<enable_message>())
+{
+	std::cout << "按任意键及回车，进入下一组测试";
+	char c;
+	std::cin >> c;
+}

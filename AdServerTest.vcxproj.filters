@@ -38,5 +38,11 @@
     <ClCompile Include="testMessage.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="testAdManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="testAdServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

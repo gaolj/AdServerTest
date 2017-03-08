@@ -13,8 +13,10 @@
 
 
 const bool enable_logger = true;
-const bool enable_message = true;
-const bool enable_repeat_times = true;
-const bool enable_connect = true;
+
+const bool enable_message = false;
+const bool enable_connect = false;
+const bool enable_AdManager = false;
+const bool enable_AdServer = true;
 
 
