@@ -90,7 +90,7 @@ BOOST_AUTO_TEST_CASE(downloadAds, *utf::enable_if<enable_AdManager>())
 	for (int i = 0; i < count; i++)
 	{
 		impl.downloadAds();
-		impl._mapImage.clear();
+		impl._bufImages.clear();
 	}
 
 	LOG_INFO(logger) << "END downloadAds" << "\n";
