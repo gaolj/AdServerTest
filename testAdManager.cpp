@@ -18,7 +18,7 @@ static auto endpoint = tcp::endpoint(address::from_string("139.224.61.179"), 820
 AdManager::AdManagerImpl impl;
 BOOST_AUTO_TEST_CASE(connection, *utf::enable_if<enable_AdManager>())
 {
-	impl.setConfig("139.224.61.179", 8207, 123456, true, 18888);
+	impl.setConfig("139.224.61.179", 8207, 123456, true, 18888, "debug");
 	if (!impl._tcpClient->syncConnect(endpoint))
 		LOG_INFO(logger) << "连接中心失败" << "\n";
 	else

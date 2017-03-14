@@ -8,8 +8,8 @@ namespace utf = boost::unit_test;
 #include "stdafx.h"
 #include "Logger.h"
 
-BOOST_AUTO_TEST_CASE(tc_init_logger, *utf::enable_if<enable_logger>())
+BOOST_AUTO_TEST_CASE(tc_init_logger)
 {
-	initLogger();
+	initLogger(debug);
 }
 

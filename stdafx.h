@@ -12,8 +12,6 @@
 #include <iostream>
 
 
-const bool enable_logger = true;
-
 const bool enable_message = false;
 const bool enable_connect = false;
 const bool enable_AdManager = false;
