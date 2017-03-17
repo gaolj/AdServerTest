@@ -20,19 +20,20 @@ static auto locolhost = tcp::endpoint(address::from_string("127.0.0.1"), 18888);
 // 测试向中心取策略、广告列表、下载广告的完整业务
 BOOST_AUTO_TEST_CASE(AdServerTest, *utf::enable_if<enable_AdServer>())
 {
-	LOG_INFO(logger) << "BGN AdServerTest";
+	LOG_INFO(logger) << "起动广告服务端";
 
 	AdManager& adManager = AdManager::getInstance();
 	adManager.setConfig("139.224.61.179", 8207, 123456, true, 18888);
 	adManager.bgnBusiness();
-
-	LOG_INFO(logger) << "END AdServerTest" << "\n";
 }
 
 BOOST_AUTO_TEST_CASE(tc_end_AdServer, *utf::enable_if<enable_AdServer>())
 {
-	LOG_INFO(logger) << "按任意键及回车，进入下一组测试";
+	LOG_INFO(logger) << "按任意键及回车，停止广告服务端，进入下一组测试";
 	char c;
 	std::cin >> c;
+
+	AdManager& adManager = AdManager::getInstance();
+	adManager.endBusiness();
 }
 

@@ -32,9 +32,6 @@
     <ClCompile Include="AdServerTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="testConnect.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="testMessage.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
