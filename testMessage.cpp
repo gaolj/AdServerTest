@@ -107,4 +107,6 @@ BOOST_AUTO_TEST_CASE(tc_end_message, *utf::enable_if<enable_message>())
 	std::cout << "按任意键及回车，进入下一组测试";
 	char c;
 	std::cin >> c;
+
+	google::protobuf::ShutdownProtobufLibrary();
 }
