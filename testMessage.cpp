@@ -71,6 +71,37 @@ BOOST_AUTO_TEST_CASE(tc_message_test2, *utf::enable_if<enable_message>())
 	std::cout << "END message 中文" << std::endl << std::endl;
 }
 
+BOOST_AUTO_TEST_CASE(tc_message_test3, *utf::enable_if<enable_message>())
+{
+	std::cout << "BGN message 中文" << std::endl;
+
+	bool b;
+	std::string str;
+	Message msg;
+	msg.SerializeToString(&str);
+	msg.set_id(1);
+	msg.SerializeToString(&str);
+	msg.set_method("aa");
+	msg.SerializeToString(&str);
+
+	msg.set_id(1);
+	msg.set_method("aa");
+	msg.set_returncode(1);
+	msg.set_returnmsg("bb");
+
+	std::string str1, str2;
+	b = msg.SerializeToString(&str1);
+
+	msg.set_id(0);
+	msg.set_returncode(0);
+	b = msg.SerializeToString(&str2);
+
+	BOOST_CHECK_EQUAL(b, true);
+
+	std::cout << "END message 中文" << std::endl << std::endl;
+}
+
+
 BOOST_AUTO_TEST_CASE(tc_end_message, *utf::enable_if<enable_message>())
 {
 	std::cout << "按任意键及回车，进入下一组测试";
