@@ -23,7 +23,7 @@ BOOST_AUTO_TEST_CASE(AdServerTest, *utf::enable_if<enable_AdServer>())
 	LOG_INFO(logger) << "起动广告服务端";
 
 	AdManager& adManager = AdManager::getInstance();
-	adManager.setConfig("139.224.61.179", 8207, 123456, true, 18888);
+	adManager.setConfig("139.224.61.179", 8207, "123456", true, 18888);
 	adManager.bgnBusiness();
 }
 
